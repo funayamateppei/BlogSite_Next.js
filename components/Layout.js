@@ -30,6 +30,11 @@ export default function Layout({ children, title = "HP by Next.js" }) {
                   Contact
                 </a>
               </Link>
+              <Link href="/file-upload-page">
+                <a className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded">
+                  FileUpload
+                </a>
+              </Link>
             </div>
           </div>
         </nav>
