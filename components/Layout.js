@@ -35,6 +35,11 @@ export default function Layout({ children, title = "HP by Next.js" }) {
                   FileUpload
                 </a>
               </Link>
+              <Link href="/file-show-page">
+                <a className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded">
+                  FileShow
+                </a>
+              </Link>
             </div>
           </div>
         </nav>

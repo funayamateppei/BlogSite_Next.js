@@ -16,10 +16,14 @@ const FileUpload = () => {
     data.append("image", image);
     // API通信
     try {
-      const response = await axios.post("http://localhost/api/upload", data, {
-        headers: { "content-type": "multipart/form-data" },
-        withCredentials: true,
-      });
+      const response = await axios.post(
+        "http://localhost/api/file/upload",
+        data,
+        {
+          headers: { "content-type": "multipart/form-data" },
+          withCredentials: true,
+        }
+      );
       console.log(response.data);
     } catch (error) {
       if (error.response) {
@@ -38,7 +42,13 @@ const FileUpload = () => {
     <Layout title="File Upload">
       FileUpload-Page
       <input type="file" accept=".png,.jpg" onChange={handleInputChange} />
-      <button onClick={fileSubmit} disabled={image ? false : true}>
+      <button
+        className={`border px-3 py-1 border-black ${
+          image ? "bg-gray-200" : "bg-gray-400"
+        }`}
+        onClick={fileSubmit}
+        disabled={image ? false : true}
+      >
         送信
       </button>
     </Layout>
