@@ -13,7 +13,7 @@ const FileShow = ({ images }) => {
                 key={index}
                 className="w-24 h-24 object-cover border"
                 // src={`http://localhost${image.path}`}
-              src={image.path}
+                src={`https://funamushibucket.s3.ap-southeast-1.amazonaws.com/${image.path}`}
                 alt="file"
               />
             ))
