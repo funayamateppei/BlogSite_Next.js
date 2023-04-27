@@ -25,6 +25,9 @@ const FileUpload = () => {
         }
       );
       console.log(response.data);
+      if (response.status === 200) {
+        window.location.href = "/file-show-page";
+      }
     } catch (error) {
       if (error.response) {
         console.log(error.response);
