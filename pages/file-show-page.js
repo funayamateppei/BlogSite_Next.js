@@ -6,13 +6,14 @@ const FileShow = ({ images }) => {
   return (
     <Layout title="File Show">
       FileShow
-      <div className="flex">
+      <div className="flex flex-wrap">
         {images
           ? images.map((image, index) => (
               <img
                 key={index}
                 className="w-24 h-24 object-cover border"
-                src={`http://localhost${image.path}`}
+                // src={`http://localhost${image.path}`}
+              src={image.path}
                 alt="file"
               />
             ))
